@@ -1,0 +1,5 @@
+node_modules
+produccion
+desarrollo
+parcel-cache
+*tmp
