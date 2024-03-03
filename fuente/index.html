@@ -1,27 +1,29 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Jquery Gatos</title>
-    <link rel="stylesheet" href="../fuente/estilos/gato.css">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../fuente/estilos/style.css">
     <script src="../node_modules/jquery/dist/jquery.min.js"></script>
-    <script src="../fuente/scripts/gatos.js" defer></script>
-</head>
-<body>
-    <h1>Gatos</h1>
-    <div class="contenedorBotones">
-        <p>Vista</p>
-        <button id="lista">Lista</button>
-        <button id="Tabla">Tabla</button>
-        <p>Ordenar por</p>
-        <button id="ordenarNombre">Nombre</button>
-        <button id="ordenarFact">Fact</button>
-        <p>Orden</p>
-        <button id="ascendente">Ascendente</button>
-        <button id="descendente">Descendente</button>
+    <script type="module" src="../fuente/scripts/gatos.js" defer></script>
+    <title>Jquery App</title>
+  </head>
+  <body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="../fuente/index.html">Inicio</a></li>
+        <li><a href="../fuente/html/login.html" id="loginHeader">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+    <div class="contendorBotones">
+      <button id="lista">Lista</button>
+      <button id="tabla">Tabla</button>
+      <button id="ascendente">Nombre Ascendente</button>
+      <button id="descendente">Nombre Descendente</button>
     </div>
-    <section class="contenedor">
-
-    </section>
-</body>
+    <div class="contenedor"></div>
+  </body>
 </html>

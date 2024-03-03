@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../scripts/login.js" defer></script>
+    <link rel="stylesheet" href="../estilos/style.css" type="text/css">
+</head>
+<body>
+<header>
+    <nav>
+        <ul>
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="../html/login.html" id="loginHeader">Login</a></li>
+        </ul>
+    </nav>
+</header>
+    <main>
+        <h1 id="titulo">Login</h1>
+        <form id="login">
+            <input type="text" id="username" placeholder="Username">
+            <input type="password" id="password" placeholder="Password">
+            <button type="submit">Login</button>
+            <a href="#" id="openReg">No tiene cuenta registrate</a>
+        </form>
+
+
+        <form id="Register">
+            <input type="text" id="regUsername" placeholder="Username">
+            <input type="password" id="regPassword" placeholder="Password">
+            <input type="email" id="email" placeholder="E-mail">
+            <input type="text" id="nombre" placeholder="Nombre">
+            <input type="text" id="apellidos" placeholder="Apellidos">
+            <input type="number" id="telefono" placeholder="Telefono">
+            <input type="text" id="DNI" placeholder="DNI">
+            <input type="number" id="edad" placeholder="Edad">
+            <button type="submit" >Register</button>
+            <a href="#" id="goBack">Vuelve atras</a>
+        </form>
+
+    </main>
+</body>
+</html>
