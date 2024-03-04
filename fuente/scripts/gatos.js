@@ -307,24 +307,6 @@ $(document).ready(function() {
         $(this).html(buttonText);
     });
 
-    $('.like, .dislike, .favorite').each(function() {
-        let breedName = $(this).data('breed');
-        let buttonType = $(this).attr('class');
-        let count = localStorage.getItem(breedName + buttonType) || 0;
-        let buttonText = '';
-        switch(buttonType) {
-            case 'like':
-                buttonText = `Me gusta <span>(${count})</span>`;
-                break;
-            case 'dislike':
-                buttonText = `No me gusta <span>(${count})</span>`;
-                break;
-            case 'favorite':
-                buttonText = `Favorito <span>(${count})</span>`;
-                break;
-        }
-        $(this).html(buttonText);
-    });
 
     getBreeds().then(getImagenes).then(ordenarDatos);
     addScrollEvent();
