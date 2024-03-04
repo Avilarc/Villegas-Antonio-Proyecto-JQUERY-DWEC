@@ -1,20 +1,12 @@
 const API_KEY = 'live_zwSjl5d422mzAzT4qrKzd3RWjP3WzRhvxy1FGi2kdgojOG98sdydTgip6KQaoJXs';
 let vista = false;
 let currentPage = 0;
-let ordenCampo = 'nombre';
 let ordenAscendente = true;
 let datos = [];
 let gatosCargados = [];
 let isLoading = false;
 
-async function fetchData(url) {
-    try {
-        let response = await $.ajax({ url, method: 'GET' });
-        return response;
-    } catch (error) {
-        console.error(error);
-    }
-}
+
 
 function getFacts() {
     let urlFacts = "https://catfact.ninja/facts?limit=20";
@@ -236,14 +228,12 @@ $(document).ready(function() {
         vista = false;
         $('.contenedor').empty();
         ordenarDatos(datos);
-        // Add the scroll event back when returning to list view
         addScrollEvent();
     });
     $('#tabla').on('click', function() {
         vista = true;
         $('.contenedor').empty();
         ordenarDatos(datos);
-        // Add the scroll event back when returning to table view
         addScrollEvent();
     });
 
@@ -280,7 +270,7 @@ $(document).ready(function() {
     $(document).on('click', '.item, tr', function() {
         let breedName = $(this).find('h2, td:first-child').text();
         $('.contenedor').empty();
-        // Remove the scroll event when showing breed details
+        // quita el evento scroll
         $(window).off('scroll');
         getBreedDetails(breedName).then(getImagenesDetails).then(showBreedDetails);
     });
